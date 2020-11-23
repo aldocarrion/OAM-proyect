@@ -1,8 +1,22 @@
 import React, { Component } from "react";
 import background from "../img/background-00.jpg";
 import background2 from "../img/background-01.jpg";
+import profileimage from "../img/descarga.jpg";
 
 const Context = React.createContext();
+
+const reducer = (state, action) => {
+  switch (action.type){
+    case 'ADD_USER':
+      return{
+        ...state,
+        users: [action.payload, ...state.users]
+
+      };
+      default:
+        return state;
+  }
+}
 
 export class Provider extends Component {
   state = {
@@ -12,27 +26,81 @@ export class Provider extends Component {
         tag: "Chile",
         title: "Titulo 1",
         date: "01.01.2020",
+        bodyres:
+          "Lineas de texto. Comienzo de noticia elaborada de Chile v1.",
         body:
-          "Lineas de texto. Comienzo de noticia elaborada de GoldAnda Chile v1.",
+          "Lineas de texto. Comienzo de noticia elaborada de Chile v1." +
+          "This is the body of the article. At vero eos et accusamus et" +
+          "iusto odio dignissimos ducimus qui blanditiis praesentium" +
+          "voluptatum deleniti atque corrupti quos dolores et quas" +
+          "molestias excepturi sint occaecati cupiditate non provident," +
+          "similique sunt in culpa qui officia deserunt mollitia animi," +
+          "id est laborum et dolorum fuga. Et harum quidem rerum" +
+          "facilis est et expedita distinctio. Nam libero tempore, cum" +
+          "soluta nobis est eligendi optio cumque nihil impedit quo" +
+          "minus id quod maxime placeat facere possimus, omnis voluptas" +
+          "assumenda est, omnis dolor repellendus. Temporibus autem" +
+          "quibusdam et aut officiis debitis aut rerum necessitatibus" +
+          "saepe eveniet ut et voluptates repudiandae sint et molestiae" +
+          "non recusandae. Itaque earum rerum hic tenetur a sapiente" +
+          "delectus, ut aut reiciendis voluptatibus maiores alias" +
+          "consequatur aut perferendis doloribus asperiores repellat",
         link: "/testNews1",
+        image: null,
       },
       {
         key: 2,
-        tag: "Chile",
+        tag: "Russia",
         title: "Titulo 2",
         date: "02.02.2020",
+        bodyres:
+          "Lineas de texto. Comienzo de noticia elaborada de Chile v2.",
         body:
-          "Lineas de texto. Comienzo de noticia elaborada de GoldAnda Chile v2.",
+          "Lineas de texto. Comienzo de noticia elaborada de Chile v2." +
+          "This is the body of the article. At vero eos et accusamus et" +
+          "iusto odio dignissimos ducimus qui blanditiis praesentium" +
+          "voluptatum deleniti atque corrupti quos dolores et quas" +
+          "molestias excepturi sint occaecati cupiditate non provident," +
+          "similique sunt in culpa qui officia deserunt mollitia animi," +
+          "id est laborum et dolorum fuga. Et harum quidem rerum" +
+          "facilis est et expedita distinctio. Nam libero tempore, cum" +
+          "soluta nobis est eligendi optio cumque nihil impedit quo" +
+          "minus id quod maxime placeat facere possimus, omnis voluptas" +
+          "assumenda est, omnis dolor repellendus. Temporibus autem" +
+          "quibusdam et aut officiis debitis aut rerum necessitatibus" +
+          "saepe eveniet ut et voluptates repudiandae sint et molestiae" +
+          "non recusandae. Itaque earum rerum hic tenetur a sapiente" +
+          "delectus, ut aut reiciendis voluptatibus maiores alias" +
+          "consequatur aut perferendis doloribus asperiores repellat",
         link: "/testNews2",
+        image: null,
       },
       {
         key: 3,
-        tag: "Chile",
+        tag: "Argentina",
         title: "Titulo 3",
         date: "03.03.2020",
+        bodyres:
+          "Lineas de texto. Comienzo de noticia elaborada de Chile v3.",
         body:
-          "Lineas de texto. Comienzo de noticia elaborada de GoldAnda Chile v3.",
+          "Lineas de texto. Comienzo de noticia elaborada de Chile v3." +
+          "This is the body of the article. At vero eos et accusamus et" +
+          "iusto odio dignissimos ducimus qui blanditiis praesentium" +
+          "voluptatum deleniti atque corrupti quos dolores et quas" +
+          "molestias excepturi sint occaecati cupiditate non provident," +
+          "similique sunt in culpa qui officia deserunt mollitia animi," +
+          "id est laborum et dolorum fuga. Et harum quidem rerum" +
+          "facilis est et expedita distinctio. Nam libero tempore, cum" +
+          "soluta nobis est eligendi optio cumque nihil impedit quo" +
+          "minus id quod maxime placeat facere possimus, omnis voluptas" +
+          "assumenda est, omnis dolor repellendus. Temporibus autem" +
+          "quibusdam et aut officiis debitis aut rerum necessitatibus" +
+          "saepe eveniet ut et voluptates repudiandae sint et molestiae" +
+          "non recusandae. Itaque earum rerum hic tenetur a sapiente" +
+          "delectus, ut aut reiciendis voluptatibus maiores alias" +
+          "consequatur aut perferendis doloribus asperiores repellat",
         link: "/testNews3",
+        image: null,
       },
     ],
     items: [
@@ -69,18 +137,18 @@ export class Provider extends Component {
       },
       {
         key: 4,
-        head: "Red de Ventas",
-        headlink: "/redventas",
+        head: "Perfiles",
+        headlink: "/profile",
       },
       {
         key: 5,
-        head: "Trabaja con Nosotros",
-        headlink: "/inscripcion",
+        head: "Registro de Usuario",
+        headlink: "/addUser",
       },
       {
         key: 6,
-        head: "Contacto",
-        headlink: "/contacto",
+        head: "Editar Usuario",
+        headlink: "/editUser",
       },
     ],
     carousel: [
@@ -90,7 +158,7 @@ export class Provider extends Component {
         title: "Title 1",
         body: "Body 1",
         btn: "btn 1",
-        url: "url 1",
+        url: "url_1",
       },
       {
         key: 2,
@@ -98,17 +166,23 @@ export class Provider extends Component {
         title: "Title 2",
         body: "Body 2",
         btn: "btn 2",
-        url: "url 2",
+        url: "url_2",
       },
       {
         key: 3,
-        image: "src 3",
+        image: { profileimage },
         title: "Title 3",
         body: "Body 3",
         btn: "btn 3",
-        url: "url 3",
+        url: "url_3",
       },
     ],
+    
+    
+    dispatch: action => {
+      this.setState(state => reducer(state, action))
+    }
+
   };
   render() {
     return (

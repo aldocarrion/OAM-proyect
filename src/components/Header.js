@@ -6,7 +6,7 @@ const Header = (props) => {
   return (
     <nav className="navbar navbar-expand-lg mb-3 py-0">
       <a href="/">
-        <img src={image} className="" alt="Logo" width="302px" height="120px" />
+        <img src='' className="" alt="Logo" width="302px" height="120px" />
       </a>
 
       <div className="row">

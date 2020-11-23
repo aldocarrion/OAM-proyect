@@ -22,7 +22,7 @@ class News extends Component {
                         {item.key.toString()}
                       </div>
                       <p className="card-text mb-auto">
-                        {item.body} Fecha:{item.date}
+                        {item.bodyres} Fecha:{item.date}
                       </p>
                       <Link className="nav-item" to={`/article/${item.key}`}>
                         Continuar leyendo...

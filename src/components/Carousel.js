@@ -3,6 +3,7 @@ import { Consumer } from "../contexts/context";
 
 import background from "../img/background-00.jpg";
 import background2 from "../img/background-01.jpg";
+import profileimage from "../img/descarga.jpg";
 
 function isPosition(value) {
   if (value === 1) {
@@ -19,6 +20,8 @@ function isPosition(value) {
 function isBackground(value) {
   if (value === 1) {
     return background;
+  } if(value === 2) {
+    return profileimage;
   } else {
     return background2;
   }
