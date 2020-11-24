@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/aldocarrion.github.io/OAM-proyect/static/css/main.1051e333.chunk.css",
+    "main.js": "/aldocarrion.github.io/OAM-proyect/static/js/main.fc7e14a8.chunk.js",
+    "main.js.map": "/aldocarrion.github.io/OAM-proyect/static/js/main.fc7e14a8.chunk.js.map",
+    "runtime-main.js": "/aldocarrion.github.io/OAM-proyect/static/js/runtime-main.7051afe2.js",
+    "runtime-main.js.map": "/aldocarrion.github.io/OAM-proyect/static/js/runtime-main.7051afe2.js.map",
+    "static/css/2.43079d8c.chunk.css": "/aldocarrion.github.io/OAM-proyect/static/css/2.43079d8c.chunk.css",
+    "static/js/2.9539222f.chunk.js": "/aldocarrion.github.io/OAM-proyect/static/js/2.9539222f.chunk.js",
+    "static/js/2.9539222f.chunk.js.map": "/aldocarrion.github.io/OAM-proyect/static/js/2.9539222f.chunk.js.map",
+    "index.html": "/aldocarrion.github.io/OAM-proyect/index.html",
+    "precache-manifest.ca546bf344bfe3fdfd3d6f9437779688.js": "/aldocarrion.github.io/OAM-proyect/precache-manifest.ca546bf344bfe3fdfd3d6f9437779688.js",
+    "service-worker.js": "/aldocarrion.github.io/OAM-proyect/service-worker.js",
+    "static/css/2.43079d8c.chunk.css.map": "/aldocarrion.github.io/OAM-proyect/static/css/2.43079d8c.chunk.css.map",
+    "static/css/main.1051e333.chunk.css.map": "/aldocarrion.github.io/OAM-proyect/static/css/main.1051e333.chunk.css.map",
+    "static/js/2.9539222f.chunk.js.LICENSE.txt": "/aldocarrion.github.io/OAM-proyect/static/js/2.9539222f.chunk.js.LICENSE.txt",
+    "static/media/Logo_FULL.svg.png": "/aldocarrion.github.io/OAM-proyect/static/media/Logo_FULL.svg.f24a4cd6.png",
+    "static/media/background-00.jpg": "/aldocarrion.github.io/OAM-proyect/static/media/background-00.4d056ba7.jpg",
+    "static/media/background-01.jpg": "/aldocarrion.github.io/OAM-proyect/static/media/background-01.4d056ba7.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7051afe2.js",
+    "static/css/2.43079d8c.chunk.css",
+    "static/js/2.9539222f.chunk.js",
+    "static/css/main.1051e333.chunk.css",
+    "static/js/main.fc7e14a8.chunk.js"
+  ]
+}
